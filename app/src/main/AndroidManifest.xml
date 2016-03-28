@@ -18,6 +18,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".simulatorActivity"
+            android:label="@string/title_activity_simulator"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".learningActivity"
+            android:label="@string/title_activity_learning"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".answersActivity"
+            android:label="@string/title_activity_answers"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".resultActivity"
+            android:label="@string/title_activity_result"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
