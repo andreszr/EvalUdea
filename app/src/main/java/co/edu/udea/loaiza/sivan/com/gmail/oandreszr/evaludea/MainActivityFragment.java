@@ -1,11 +1,14 @@
 package co.edu.udea.loaiza.sivan.com.gmail.oandreszr.evaludea;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.app.Fragment;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 
 import static android.R.layout.simple_spinner_item;
@@ -15,7 +18,8 @@ import static android.R.layout.simple_spinner_item;
  */
 public class MainActivityFragment extends Fragment {
 
-    private String[] arraySpinner;
+    Button  buttonSimulator;
+    Button buttonLearning;
 
     public MainActivityFragment() {
         // Required empty public constructor
@@ -31,13 +35,28 @@ public class MainActivityFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
-        /*this.arraySpinner = new String[] {
-                "Básico", "Intermedio", "Real"
-        };
-        Spinner spinner = (Spinner) view.findViewById(R.id.mainSpinner);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), simple_spinner_item, arraySpinner);
-        spinner.setAdapter(adapter);*/
+        this.buttonSimulator = (Button) view.findViewById(R.id.buttonSimulator);
+        this.buttonLearning = (Button) view.findViewById(R.id.buttonLearning);
 
+        buttonSimulator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {onClickSimulator(view);          }
+        });
+
+        buttonLearning.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {onClickLearning(view);          }
+        });
         return view;
+    }
+
+    public void onClickLearning(View view){
+        Intent intent = new Intent(getActivity(), learningActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickSimulator(View view){
+        Intent intent = new Intent(getActivity(), simulatorActivity.class);
+        startActivity(intent);
     }
 }

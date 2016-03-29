@@ -6,39 +6,58 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@mipmap/uilow"
     tools:context="co.edu.udea.loaiza.sivan.com.gmail.oandreszr.evaludea.MainActivityFragment"
     tools:showIn="@layout/activity_main">
 
 
+    <!--<ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="learning"
+        android:src="@mipmap/aprendizaje1"
+        android:onClick="onClickLearning"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/buttonLearning"
+        android:background="#009688"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="simulator"
+        android:src="@mipmap/simulador"
+        android:id="@+id/buttonsimulator"
+        android:onClick="onClickSimulator"
+        android:background="#009688"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/buttonSimulator"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="40dp"/>-->
+
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/mainButton"
-        android:id="@+id/mainButton"
-        android:layout_alignParentTop="true"
+        android:text="Aprendizaje"
+        android:id="@+id/buttonLearning"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="85dp"
         android:theme="@style/MyButton"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/mainButton2"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/mainButton"
-        android:layout_centerHorizontal="true"
+        android:text="Simulador"
+        android:id="@+id/buttonSimulator"
+        android:layout_alignTop="@+id/buttonLearning"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="70dp"
         android:theme="@style/MyButton"/>
-
-    <!--<Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/mainSpinner"
-        android:id="@+id/mainSpinner"
-        android:spinnerMode="dialog"
-        android:layout_below="@+id/mainButton2"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="20dp"
-        android:theme="@style/MyButton"/>-->
-
 </RelativeLayout>
