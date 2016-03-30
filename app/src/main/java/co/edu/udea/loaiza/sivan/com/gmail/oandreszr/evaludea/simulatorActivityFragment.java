@@ -1,13 +1,24 @@
 package co.edu.udea.loaiza.sivan.com.gmail.oandreszr.evaludea;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Intent;
+import android.graphics.Point;
+import android.graphics.Rect;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.Toast;
 
 /**
@@ -15,9 +26,10 @@ import android.widget.Toast;
  */
 public class simulatorActivityFragment extends Fragment {
 
-    Button buttonAnterior;
-    Button buttonAceptar;
-    Button buttonOmitir;
+    Button buttonAnterior, buttonAceptar, buttonOmitir;
+    RadioGroup radioGroup;
+    RadioButton RadioButton1, RadioButton2, RadioButton3, RadioButton4;
+    View view;
 
     public simulatorActivityFragment() {
     }
@@ -30,8 +42,13 @@ public class simulatorActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_simulator, container, false);
+        view = inflater.inflate(R.layout.fragment_simulator, container, false);
 
+        this.radioGroup = (RadioGroup) view.findViewById(R.id.simulatorRadioGroup);
+        this.RadioButton1 = (RadioButton) view.findViewById(R.id.simulatorRadioButton1);
+        this.RadioButton2 = (RadioButton) view.findViewById(R.id.simulatorRadioButton2);
+        this.RadioButton3 = (RadioButton) view.findViewById(R.id.simulatorRadioButton3);
+        this.RadioButton4 = (RadioButton) view.findViewById(R.id.simulatorRadioButton4);
         this.buttonAnterior = (Button) view.findViewById(R.id.simulatorButton1);
         this.buttonAceptar = (Button) view.findViewById(R.id.simulatorButton2);
         this.buttonOmitir = (Button) view.findViewById(R.id.simulatorButton3);
@@ -53,8 +70,43 @@ public class simulatorActivityFragment extends Fragment {
             }
         });
 
+        radioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId == R.id.simulatorRadioButton1) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Respuesta 1", Toast.LENGTH_SHORT).show();
+                } else if(checkedId == R.id.simulatorRadioButton2) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Respuesta 2", Toast.LENGTH_SHORT).show();
+                } else if(checkedId == R.id.simulatorRadioButton3) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Respuesta 3", Toast.LENGTH_SHORT).show();
+                } else if(checkedId == R.id.simulatorRadioButton4) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Respuesta 4", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        //addRadioButtons(4);
+
+
         return view;
     }
+
+    //metodo para añadir radioButtons dinamicamente
+    /*public void addRadioButtons(int number) {
+
+        for (int row = 0; row < 1; row++) {
+            LinearLayout ll = new LinearLayout(getActivity());
+            ll.setOrientation(LinearLayout.VERTICAL);
+
+            for (int i = 1; i <= number; i++) {
+                RadioButton rdbtn = new RadioButton(getActivity());
+                rdbtn.setId((row * 2) + i);
+                rdbtn.setText("Respuesta " + rdbtn.getId());
+                ll.addView(rdbtn);
+            }
+            ((ViewGroup) view.findViewById(R.id.radiogroup)).addView(ll);
+        }
+
+    }*/
 
     public void onClickAnterior(View view) {
         Intent intent = new Intent(getActivity(), MainActivity.class);
@@ -72,3 +124,5 @@ public class simulatorActivityFragment extends Fragment {
     }
 
 }
+
+

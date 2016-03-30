@@ -21,19 +21,19 @@
         </activity>
         <activity
             android:name=".simulatorActivity"
-            android:label="@string/title_activity_simulator"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/simulator"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".learningActivity"
-            android:label="@string/title_activity_learning"
+            android:label="@string/learning"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".answersActivity"
-            android:label="@string/title_activity_answers"
+            android:label="@string/answers"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".resultActivity"
-            android:label="@string/title_activity_result"
+            android:label="@string/result"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

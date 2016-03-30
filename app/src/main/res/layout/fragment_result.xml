@@ -10,4 +10,373 @@
     tools:showIn="@layout/activity_result">
 
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/resultTextViewPreguntasCorrectas"
+            android:id="@+id/resultTextViewPreguntasCorrectas"
+            android:background="@drawable/squares_shapes" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/resultTextViewPorcentajeCorrectas"
+            android:id="@+id/resultTextViewPorcentajeCorrectas"
+            android:background="@drawable/squares_shapes"
+             />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/resultTextViewTiempoTotal"
+            android:id="@+id/resultTextViewTiempoTotal"
+            android:background="@drawable/squares_shapes"
+             />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/resultTextViewSolucion"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center_horizontal"
+            android:id="@+id/resultTextViewSolucion"  />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resultTable1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/resultTable1"
+                    android:background="@drawable/squares_shapes"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resultTable2"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/resultTable2"
+                    android:background="@drawable/squares_shapes"
+                    android:layout_weight="5" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resultTable3"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/resultTable3"
+                    android:background="@drawable/squares_shapes"
+                    android:layout_weight="5" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resultTable4"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/resultTable4"
+                    android:background="@drawable/squares_shapes"
+                    android:layout_weight="5" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resultTable5"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/resultTable5"
+                    android:background="@drawable/squares_shapes"
+                    android:layout_weight="5" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info1"
+                    android:layout_weight="1" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info2"
+                    android:layout_weight="5" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info3"
+                    android:layout_weight="5" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info4"
+                    android:layout_weight="5" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info5"
+                    android:layout_weight="5" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info1"
+                    android:layout_weight="1" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info2"
+                    android:layout_weight="5" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info3"
+                    android:layout_weight="5" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info4"
+                    android:layout_weight="5" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info5"
+                    android:layout_weight="5" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info1"
+                    android:layout_weight="1" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info2"
+                    android:layout_weight="5" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info3"
+                    android:layout_weight="5" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info4"
+                    android:layout_weight="5" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info5"
+                    android:layout_weight="5" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info1"
+                    android:layout_weight="1" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info2"
+                    android:layout_weight="5" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info3"
+                    android:layout_weight="5" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info4"
+                    android:layout_weight="5" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info5"
+                    android:layout_weight="5" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info1"
+                    android:layout_weight="1" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info2"
+                    android:layout_weight="5" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info3"
+                    android:layout_weight="5" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info4"
+                    android:layout_weight="5" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info5"
+                    android:layout_weight="5" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info1"
+                    android:layout_weight="1" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info2"
+                    android:layout_weight="5" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info3"
+                    android:layout_weight="5" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info4"
+                    android:layout_weight="5" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/squares_shapes1"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/info5"
+                    android:layout_weight="5" />
+            </TableRow>
+        </TableLayout>
+
+
+
+
+    </LinearLayout>
 </RelativeLayout>

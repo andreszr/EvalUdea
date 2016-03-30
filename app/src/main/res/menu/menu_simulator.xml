@@ -2,9 +2,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="co.edu.udea.loaiza.sivan.com.gmail.oandreszr.evaludea.simulatorActivity">
+
+    <item
+        android:id="@+id/action_marcar"
+        android:orderInCategory="100"
+        android:title="@string/action_marcar"
+        android:icon="@mipmap/star"
+        app:showAsAction= "always"/>
+
     <item
         android:id="@+id/action_preguntas"
         android:orderInCategory="100"
         android:title="@string/action_preguntas"
-        app:showAsAction="never" />
+        android:icon="@mipmap/check"
+        app:showAsAction="always" />
 </menu>

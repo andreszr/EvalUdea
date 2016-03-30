@@ -2,6 +2,7 @@
     <string name="app_name">EvalUdea</string>
     <string name="action_settings">Settings</string>
     <string name="action_preguntas">Preguntas</string>
+    <string name="action_marcar">Marcar</string>
     <string name="title_activity_simulator">simulatorActivity</string>
     <string name="title_activity_learning">learningActivity</string>
     <string name="title_activity_answers">answersActivity</string>
@@ -15,5 +16,26 @@
     <string name="simulatorButton1">Atras</string>
     <string name="simulatorButton2">Aceptar</string>
     <string name="simulatorButton3">Omitir</string>
+
+    <string name="simulatorRadioButton1">18</string>
+    <string name="simulatorRadioButton2">27</string>
+    <string name="simulatorRadioButton3">55</string>
+    <string name="simulatorRadioButton4">64</string>
+
+    <string name="resultTextViewPreguntasCorrectas">Total de preguntas correctas: </string>
+    <string name="resultTextViewPorcentajeCorrectas">Porcentaje preguntas correctas: </string>
+    <string name="resultTextViewTiempoTotal">Tiempo total: </string>
+    <string name="resultTextViewSolucion">Solución</string>
+
+    <string name="resultTable1">#</string>
+    <string name="resultTable2">Selección</string>
+    <string name="resultTable3">Correcta</string>
+    <string name="resultTable4">Tiempo</string>
+    <string name="resultTable5">Solución</string>
+
+    <string name="simulatorPregunta">La anterior figura consta de 9 cubos pegados. Usando esta figura como base, la menor cantidad de cubitos que
+			Faltan para construir un cubo sólido es:
+</string>
+
 
 </resources>
