@@ -1,12 +1,19 @@
 <resources>
     <string name="app_name">EvalUdea</string>
     <string name="action_settings">Settings</string>
+    <string name="action_preguntas">Preguntas</string>
     <string name="title_activity_simulator">simulatorActivity</string>
     <string name="title_activity_learning">learningActivity</string>
     <string name="title_activity_answers">answersActivity</string>
     <string name="title_activity_result">resultActivity</string>
 
-    <string name="mainButton">Aprendizaje</string>
-    <string name="mainSpinner">Simulador</string>
+    <string name="learning">Aprendizaje</string>
+    <string name="simulator">Simulador</string>
+    <string name="result">Resultado</string>
+    <string name="answers">Respuestas</string>
+
+    <string name="simulatorButton1">Atras</string>
+    <string name="simulatorButton2">Aceptar</string>
+    <string name="simulatorButton3">Omitir</string>
 
 </resources>

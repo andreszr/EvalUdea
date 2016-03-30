@@ -6,19 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.app.Fragment;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.Spinner;
-
-import static android.R.layout.simple_spinner_item;
 
 /**
  * A placeholder fragment containing a simple view.
  */
 public class MainActivityFragment extends Fragment {
 
-    Button  buttonSimulator;
+    Button buttonSimulator;
     Button buttonLearning;
 
     public MainActivityFragment() {
@@ -35,14 +30,13 @@ public class MainActivityFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
-        this.buttonSimulator = (Button) view.findViewById(R.id.buttonSimulator);
-        this.buttonLearning = (Button) view.findViewById(R.id.buttonLearning);
+        this.buttonSimulator = (Button) view.findViewById(R.id.mainButtonSimulator);
+        this.buttonLearning = (Button) view.findViewById(R.id.mainButtonLearning);
 
         buttonSimulator.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {onClickSimulator(view);          }
         });
-
         buttonLearning.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {onClickLearning(view);          }

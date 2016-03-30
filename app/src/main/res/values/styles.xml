@@ -17,8 +17,13 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="MyButton" parent="Theme.AppCompat.Light">
+    <style name="buttonApp" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">@color/colorAccent</item>
         <item name="colorButtonNormal">@color/colorPrimary</item>
+    </style>
+
+    <style name="buttonAceptar" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="colorButtonNormal">@color/colorAccent</item>
     </style>
 </resources>
