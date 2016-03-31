@@ -2,10 +2,5 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="co.edu.udea.loaiza.sivan.com.gmail.oandreszr.evaludea.learningActivity">
-    <item
-        android:id="@+id/action_preguntas"
-        android:orderInCategory="100"
-        android:title="@string/action_preguntas"
-        android:icon="@mipmap/check"
-        app:showAsAction="always" />
+
 </menu>
