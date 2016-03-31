@@ -13,10 +13,9 @@
     <string name="result">Resultado</string>
     <string name="answers">Respuestas</string>
 
-    <string name="simulatorButton1">Atras</string>
-    <string name="simulatorButton2">Aceptar</string>
-    <string name="simulatorButton3">Omitir</string>
-
+    <string name="simulatorButton1">Anterior</string>
+    <string name="simulatorButton2">Siguiente</string>
+    <string name="simulatorButton3">Finalizar</string>
     <string name="simulatorRadioButton1">18</string>
     <string name="simulatorRadioButton2">27</string>
     <string name="simulatorRadioButton3">55</string>
@@ -26,16 +25,28 @@
     <string name="resultTextViewPorcentajeCorrectas">Porcentaje preguntas correctas: </string>
     <string name="resultTextViewTiempoTotal">Tiempo total: </string>
     <string name="resultTextViewSolucion">Solución</string>
-
     <string name="resultTable1">#</string>
     <string name="resultTable2">Selección</string>
     <string name="resultTable3">Correcta</string>
     <string name="resultTable4">Tiempo</string>
     <string name="resultTable5">Solución</string>
 
-    <string name="simulatorPregunta">La anterior figura consta de 9 cubos pegados. Usando esta figura como base, la menor cantidad de cubitos que
-			Faltan para construir un cubo sólido es:
-</string>
+    <string name="answersButton1">Marcadas</string>
+    <string name="answersButton2">Omitidas</string>
+    <string name="answersButton3">Continuar</string>
 
+    <string name="learningTextView2">A. 18</string>
+    <string name="learningTextView3">B. 27</string>
+    <string name="learningTextView4">C. 55</string>
+    <string name="learningTextView5">D. 64</string>
+    <string name="learningTextView6">La respuesta correcta es 55</string>
+    <string name="learningButton1">Anterior</string>
+    <string name="learningButton2">Siguiente</string>
+    <string name="learningButton3">Mostrar Respuesta</string>
+
+    <string name="simulatorPregunta">La anterior figura consta de 9 cubos pegados. Usando esta figura como base, la menor cantidad de cubitos que
+			Faltan para construir un cubo sólido es: </string>
+    <string name="learningPregunta">La anterior figura consta de 9 cubos pegados. Usando esta figura como base, la menor cantidad de cubitos que
+			Faltan para construir un cubo sólido es: </string>
 
 </resources>

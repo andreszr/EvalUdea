@@ -33,110 +33,108 @@
             android:layout_height="match_parent"
             android:id="@+id/simulatorScrollView" >
 
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/simulatorRadioGroup"
-            android:checkedButton="@+id/simulatorCheckedButton" >
-            <!--android:background="#CDDC39"-->
-
-            <!--<ImageButton
-                android:id="@+id/simulatorImageButton"
-                android:layout_width="100dp"
-                android:layout_height="75dp"
-                android:layout_marginRight="1dp"
-                android:src="@mipmap/diagrama1"
-                android:layout_gravity="center_horizontal"
-                android:scaleType="centerCrop"
-                 />-->
-            <ImageView
-                android:id="@+id/simulatorImageView"
+            <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@mipmap/diagrama1"/>
-
-            <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/simulatorPregunta"
-                android:id="@+id/simulatorTextView"
-                android:gravity="fill_horizontal"
-                android:background="#CDDC39"/>
+                android:id="@+id/simulatorRadioGroup"
+                android:checkedButton="@+id/simulatorCheckedButton" >
+                <!--android:background="#CDDC39"-->
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/simulatorRadioButton1"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/simulatorRadioButton1"           />
+                <!--<ImageButton
+                    android:id="@+id/simulatorImageButton"
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    android:layout_marginRight="1dp"
+                    android:src="@mipmap/diagrama1"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="centerCrop"
+                     />-->
+                <ImageView
+                    android:id="@+id/simulatorImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/diagrama1"/>
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/simulatorRadioButton2"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/simulatorRadioButton2" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/simulatorRadioButton3"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/simulatorRadioButton3" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/simulatorRadioButton4"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/simulatorRadioButton4" />
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal">
-
-
-                <Button
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/simulatorButton1"
-                    android:id="@+id/simulatorButton1"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginBottom="20dp"
-                    android:theme="@style/buttonApp"/>
+                    android:text="@string/simulatorPregunta"
+                    android:id="@+id/simulatorTextView"
+                    android:gravity="fill_horizontal"
+                    android:background="#CDDC39"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/simulatorRadioButton1"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/simulatorRadioButton1"           />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/simulatorRadioButton2"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/simulatorRadioButton2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/simulatorRadioButton3"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/simulatorRadioButton3" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/simulatorRadioButton4"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/simulatorRadioButton4" />
 
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/simulatorButton2"
                     android:id="@+id/simulatorButton2"
-                    android:layout_centerHorizontal="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="center_horizontal"
                     android:theme="@style/buttonAceptar"/>
 
-                <Button
-                    android:layout_width="wrap_content"
+
+                <TableLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/simulatorButton3"
-                    android:id="@+id/simulatorButton3"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginBottom="20dp"
-                    android:theme="@style/buttonApp"
-                    />
+                    android:layout_gravity="center_horizontal">
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
 
-            </RelativeLayout>
-        </RadioGroup>
-    </ScrollView>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/simulatorButton1"
+                            android:id="@+id/simulatorButton1"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="20dp"
+                            android:theme="@style/buttonApp"
+                            android:layout_weight="5" />
 
-
-
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/simulatorButton3"
+                            android:id="@+id/simulatorButton3"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="20dp"
+                            android:theme="@style/buttonFinalizar"
+                            android:layout_weight="5" />
+                    </TableRow>
+                </TableLayout>
+            </RadioGroup>
+        </ScrollView>
     </LinearLayout>
-
 </RelativeLayout>

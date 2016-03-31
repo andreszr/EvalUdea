@@ -10,4 +10,7 @@
     <color name="navigationBarColor">#000000</color>
     <color name="icons">#FFFFFF</color>
     <color name="divider">#B6B6B6</color>
+
+    <color name="rojo2">#b88688</color>
+    <color name="rojo">#b11116</color>
 </resources>

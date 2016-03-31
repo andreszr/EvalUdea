@@ -26,4 +26,9 @@
         <item name="colorControlHighlight">@color/colorPrimary</item>
         <item name="colorButtonNormal">@color/colorAccent</item>
     </style>
+
+    <style name="buttonFinalizar" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/rojo2</item>
+        <item name="colorButtonNormal">@color/rojo</item>
+    </style>
 </resources>

@@ -26,7 +26,7 @@ import android.widget.Toast;
  */
 public class simulatorActivityFragment extends Fragment {
 
-    Button buttonAnterior, buttonAceptar, buttonOmitir;
+    Button buttonAnterior, buttonSiguiente, buttonFinalizar;
     RadioGroup radioGroup;
     RadioButton RadioButton1, RadioButton2, RadioButton3, RadioButton4;
     View view;
@@ -50,20 +50,20 @@ public class simulatorActivityFragment extends Fragment {
         this.RadioButton3 = (RadioButton) view.findViewById(R.id.simulatorRadioButton3);
         this.RadioButton4 = (RadioButton) view.findViewById(R.id.simulatorRadioButton4);
         this.buttonAnterior = (Button) view.findViewById(R.id.simulatorButton1);
-        this.buttonAceptar = (Button) view.findViewById(R.id.simulatorButton2);
-        this.buttonOmitir = (Button) view.findViewById(R.id.simulatorButton3);
+        this.buttonSiguiente = (Button) view.findViewById(R.id.simulatorButton2);
+        this.buttonFinalizar = (Button) view.findViewById(R.id.simulatorButton3);
 
         buttonAnterior.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {onClickAnterior(view);          }
         });
-        buttonAceptar.setOnClickListener(new View.OnClickListener() {
+        buttonSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onClickAceptar(view);
+                onClickSiguiente(view);
             }
         });
-        buttonOmitir.setOnClickListener(new View.OnClickListener() {
+        buttonFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onClickOmitir(view);
@@ -111,9 +111,10 @@ public class simulatorActivityFragment extends Fragment {
     public void onClickAnterior(View view) {
         Intent intent = new Intent(getActivity(), MainActivity.class);
         startActivity(intent);
+        //getActivity().finish();
     }
 
-    public void onClickAceptar(View view) {
+    public void onClickSiguiente(View view) {
         Intent intent = new Intent(getActivity(), resultActivity.class);
         startActivity(intent);
     }

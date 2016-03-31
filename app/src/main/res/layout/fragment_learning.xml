@@ -9,5 +9,137 @@
     tools:context="co.edu.udea.loaiza.sivan.com.gmail.oandreszr.evaludea.learningActivityFragment"
     tools:showIn="@layout/activity_learning">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
+        <!--<RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"/>-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/learningScrollView" >
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/learningRadioGroup"
+                android:checkedButton="@+id/simulatorCheckedButton" >
+                <!--android:background="#CDDC39"-->
+
+                <!--<ImageButton
+                    android:id="@+id/simulatorImageButton"
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    android:layout_marginRight="1dp"
+                    android:src="@mipmap/diagrama1"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="centerCrop"
+                     />-->
+                <ImageView
+                    android:id="@+id/learningImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/diagrama1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/learningPregunta"
+                    android:id="@+id/learningTextView1"
+                    android:gravity="fill_horizontal"
+                    android:background="#CDDC39"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/learningTextView2"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/learningTextView2"           />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/learningTextView3"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/learningTextView3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/learningTextView4"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/learningTextView4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/learningTextView5"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/learningTextView5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/learningTextView6"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/learningTextView6"
+                    android:background="#CDDC39"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/learningButton3"
+                    android:id="@+id/learningButton3"
+                    android:layout_gravity="center_horizontal"
+                    android:theme="@style/buttonApp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/learningButton1"
+                            android:id="@+id/learningButton1"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="20dp"
+                            android:theme="@style/buttonApp"
+                            android:layout_weight="5" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/simulatorButton2"
+                            android:id="@+id/learningButton2"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_gravity="center_horizontal"
+                            android:theme="@style/buttonApp"
+                            android:layout_weight="5"/>
+
+                    </TableRow>
+                </TableLayout>
+            </RadioGroup>
+        </ScrollView>
+    </LinearLayout>
 </RelativeLayout>
