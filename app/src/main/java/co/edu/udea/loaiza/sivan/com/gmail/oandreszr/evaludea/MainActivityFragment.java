@@ -15,6 +15,7 @@ public class MainActivityFragment extends Fragment {
 
     Button buttonSimulator;
     Button buttonLearning;
+    Button buttonHistory;
 
     public MainActivityFragment() {
         // Required empty public constructor
@@ -32,6 +33,7 @@ public class MainActivityFragment extends Fragment {
 
         this.buttonSimulator = (Button) view.findViewById(R.id.mainButtonSimulator);
         this.buttonLearning = (Button) view.findViewById(R.id.mainButtonLearning);
+        this.buttonHistory = (Button) view.findViewById(R.id.mainButtonHistory);
 
         buttonSimulator.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +42,12 @@ public class MainActivityFragment extends Fragment {
         buttonLearning.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {onClickLearning(view);          }
+        });
+        buttonHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onClickHistory(view);
+            }
         });
         return view;
     }
@@ -51,6 +59,11 @@ public class MainActivityFragment extends Fragment {
 
     public void onClickSimulator(View view){
         Intent intent = new Intent(getActivity(), simulatorActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickHistory(View view){
+        Intent intent = new Intent(getActivity(), historyActivity.class);
         startActivity(intent);
     }
 }

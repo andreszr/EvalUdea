@@ -51,7 +51,7 @@ public class answersActivityFragment extends Fragment {
     public void onClickContinuar(View view) {
         Intent intent = new Intent(getActivity(), simulatorActivity.class);
         startActivity(intent);
-        //getActivity().finish();
+        getActivity().finish();
     }
 
     public void onClickOmitidas(View view) {

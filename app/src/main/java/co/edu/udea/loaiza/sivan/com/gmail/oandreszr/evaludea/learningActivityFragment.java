@@ -19,7 +19,7 @@ public class learningActivityFragment extends Fragment {
 
     Button buttonAnterior, buttonSiguiente, buttonRespuesta;
     TextView textViewResputa;
-    boolean answerVisible = false;
+    boolean answerInvisible = true;
     View view;
 
     public learningActivityFragment() {
@@ -56,7 +56,7 @@ public class learningActivityFragment extends Fragment {
     public void onClickAnterior(View view) {
         Intent intent = new Intent(getActivity(), MainActivity.class);
         startActivity(intent);
-        //getActivity().finish();
+        getActivity().finish();
     }
 
     public void onClickSiguiente(View view) {
@@ -64,11 +64,11 @@ public class learningActivityFragment extends Fragment {
     }
 
     public void onClickRespuesta(View view) {
-        if(answerVisible){
-            answerVisible = false;
+        if(answerInvisible){
+            answerInvisible = false;
             textViewResputa.setVisibility(view.VISIBLE);
         }else{
-            answerVisible = true;
+            answerInvisible = true;
             textViewResputa.setVisibility(view.GONE);
         }
     }

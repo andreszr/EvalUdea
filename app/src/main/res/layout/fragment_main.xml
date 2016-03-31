@@ -40,24 +40,34 @@
         android:layout_marginBottom="40dp"/>-->
 
 
-    <Button
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/learning"
-        android:id="@+id/mainButtonLearning"
-        android:layout_alignParentBottom="true"
+        android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="85dp"
-        android:theme="@style/buttonApp"/>
+        android:gravity="bottom">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/simulator"
-        android:id="@+id/mainButtonSimulator"
-        android:layout_alignTop="@+id/mainButtonLearning"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="70dp"
-        android:theme="@style/buttonApp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/learning"
+            android:id="@+id/mainButtonLearning"
+            android:theme="@style/buttonApp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/simulator"
+            android:id="@+id/mainButtonSimulator"
+            android:theme="@style/buttonApp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/history"
+            android:id="@+id/mainButtonHistory"
+            android:layout_alignParentBottom="true"
+            android:theme="@style/buttonApp"/>
+    </LinearLayout>
+
 </RelativeLayout>
