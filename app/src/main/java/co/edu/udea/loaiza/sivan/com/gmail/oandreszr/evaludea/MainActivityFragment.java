@@ -1,5 +1,7 @@
 package co.edu.udea.loaiza.sivan.com.gmail.oandreszr.evaludea;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,6 +18,8 @@ public class MainActivityFragment extends Fragment {
     Button buttonSimulator;
     Button buttonLearning;
     Button buttonHistory;
+
+    //Button buttonQuery;
 
     public MainActivityFragment() {
         // Required empty public constructor
@@ -34,6 +38,17 @@ public class MainActivityFragment extends Fragment {
         this.buttonSimulator = (Button) view.findViewById(R.id.mainButtonSimulator);
         this.buttonLearning = (Button) view.findViewById(R.id.mainButtonLearning);
         this.buttonHistory = (Button) view.findViewById(R.id.mainButtonHistory);
+
+        //this.buttonQuery = (Button) view.findViewById(R.id.mainButtonQuery);
+        /*buttonQuery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                StatementFragment fragment = new StatementFragment();
+                fragmentTransaction.replace(R.id.fragment, fragment);
+                fragmentTransaction.commit();   }
+        });*/
 
         buttonSimulator.setOnClickListener(new View.OnClickListener() {
             @Override

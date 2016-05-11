@@ -61,13 +61,20 @@
             android:id="@+id/mainButtonSimulator"
             android:theme="@style/buttonApp"/>
 
+        <!--<Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/query"
+            android:id="@+id/mainButtonQuery"
+            android:theme="@style/buttonApp"/>-->
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/history"
             android:id="@+id/mainButtonHistory"
-            android:layout_alignParentBottom="true"
             android:theme="@style/buttonApp"/>
+
     </LinearLayout>
 
 </RelativeLayout>
