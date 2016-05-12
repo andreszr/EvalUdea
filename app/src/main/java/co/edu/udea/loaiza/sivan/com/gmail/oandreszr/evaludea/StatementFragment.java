@@ -1,10 +1,13 @@
 package co.edu.udea.loaiza.sivan.com.gmail.oandreszr.evaludea;
 
 import android.app.Fragment;
+import android.app.LoaderManager;
 import android.content.Context;
+import android.content.Loader;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 
 import android.util.Log;
@@ -27,7 +30,7 @@ import co.edu.udea.loaiza.sivan.com.gmail.oandreszr.evaludea.db.StatementContrac
  * Use the {@link StatementFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class StatementFragment extends Fragment {
+public class StatementFragment extends Fragment{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -82,11 +85,6 @@ public class StatementFragment extends Fragment {
         return fragment;
     }*/
 
-    public static StatementFragment newInstance() {
-        StatementFragment fragment = new StatementFragment();
-        return fragment;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,10 +98,17 @@ public class StatementFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_statement, container, false);
+
+        return rootView;
+        // Inflate the layout for this fragment
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        //getStatement();
         statementTextView=(TextView)getActivity().findViewById(R.id.statement);
         questionListView = (ListView)getActivity().findViewById(R.id.question_list_view);
-
-       // getStatement();
 
         adapter = new SimpleCursorAdapter(getActivity(), R.layout.list_item,
                 getQuestions(), FROM, TO, 0); /*Crear objeto de SimpleCursor adapter, parámetros:
@@ -111,35 +116,38 @@ public class StatementFragment extends Fragment {
                 vistas de destino de los datos, bandera (no se utiliza en este caso)*/
 
         questionListView.setAdapter(adapter);
-        return rootView;
-        // Inflate the layout for this fragment
     }
 
     public String getStatement(){
         dbHelper = new DbHelper(getActivity()); //Instancia de DbHelper
         SQLiteDatabase db = dbHelper.getReadableDatabase(); /*Obtener instancia de la BD (lectura)*/
+        String sql= "SELECT * FROM statement WHERE _id = ?";
         String where = StatementContract.Column.ID+"=?";
         String[] whereArgs = new String[] {
                 "1"
         };
-        Cursor cursor = db.query(StatementContract.TABLE, null, where, whereArgs, null, null, null);
+        Cursor cursor = db.rawQuery(sql,whereArgs);
+        //Cursor cursor = db.query(StatementContract.TABLE, null, where, whereArgs, null, null, null);
                 /* Hace consulta en la BD
                 Parámetros: tabla, columnas (null=todas), selection (null=todas las filas),
                 selectionArgs (los ? del where), groupBy, having, orderBy*/
         Log.d("TAG", cursor.toString());
-        String statement = cursor.getString(cursor.getColumnIndex(StatementContract.Column.STATEMENT));
-        return statement;
+        Log.d("TAG",Integer.toString(cursor.getColumnIndex(StatementContract.Column.STATEMENT)));
+        //Log.d("TAG",cursor.getString(cursor.getColumnIndex(StatementContract.Column.STATEMENT)));
+        return "l";//statement;
     }
 
     public Cursor getQuestions () {
         dbHelper = new DbHelper(getActivity()); //Instancia de DbHelper
         SQLiteDatabase db = dbHelper.getReadableDatabase(); /*Obtener instancia de la BD (lectura)*/
+        String sql= "SELECT * FROM question WHERE statement = ? ORDER BY _id ASC";
         String where = QuestionContract.Column.STATEMENT+"=?";
         String[] whereArgs = new String[] {
                 "1"
         };
         String orderBy = QuestionContract.Column.ID+" ASC";
-        Cursor cursor = db.query(QuestionContract.TABLE, null, where, whereArgs, null, null, orderBy);
+        Cursor cursor = db.rawQuery(sql,whereArgs);
+       // Cursor cursor = db.query(QuestionContract.TABLE, null, where, whereArgs, null, null, orderBy);
                 /* Hace consulta en la BD
                 Parámetros: tabla, columnas (null=todas), selection (null=todas las filas),
                 selectionArgs (los ? del where), groupBy, having, orderBy*/

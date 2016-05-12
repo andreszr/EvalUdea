@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        dbHelper = new DbHelper(this); //Instancia de DbHelper
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        //dbHelper = new DbHelper(this); //Instancia de DbHelper
+        //SQLiteDatabase db = dbHelper.getWritableDatabase();
     }
 
 
