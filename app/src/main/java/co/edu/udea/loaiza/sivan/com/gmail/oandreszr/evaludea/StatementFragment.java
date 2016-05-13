@@ -2,6 +2,7 @@ package co.edu.udea.loaiza.sivan.com.gmail.oandreszr.evaludea;
 
 import android.app.Fragment;
 import android.app.LoaderManager;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Loader;
 import android.database.Cursor;
@@ -109,6 +110,7 @@ public class StatementFragment extends Fragment{
         //getStatement();
         statementTextView=(TextView)getActivity().findViewById(R.id.statement);
         questionListView = (ListView)getActivity().findViewById(R.id.question_list_view);
+        addData();
 
         adapter = new SimpleCursorAdapter(getActivity(), R.layout.list_item,
                 getQuestions(), FROM, TO, 0); /*Crear objeto de SimpleCursor adapter, parámetros:
@@ -192,5 +194,34 @@ public class StatementFragment extends Fragment{
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    public void addData(){
+        DbHelper dbHelper = new DbHelper(getActivity()); //Instancia de DbHelper
+        SQLiteDatabase db = dbHelper.getWritableDatabase(); //Obtener instancia de la BD
+        ContentValues values = new ContentValues();
+
+        values.put(StatementContract.Column.ID, "1"); //Se pasan pares nombre-valor
+        values.put(StatementContract.Column.STATEMENT, "statement 1");
+        values.put(StatementContract.Column.COMPONENT, "Razonamiento lógico");
+        db.insertWithOnConflict(StatementContract.TABLE, null, values, SQLiteDatabase.CONFLICT_IGNORE); //Se guarda la fila en la base de datos
+
+        ContentValues values1 = new ContentValues();
+        values1.put(StatementContract.Column.ID, "2"); //Se pasan pares nombre-valor
+        values1.put(StatementContract.Column.STATEMENT, "statement 2");
+        values1.put(StatementContract.Column.COMPONENT, "Razonamiento lógico");
+        db.insertWithOnConflict(StatementContract.TABLE, null, values1, SQLiteDatabase.CONFLICT_IGNORE); //Se guarda la fila en la base de datos
+
+        ContentValues values2 = new ContentValues();
+        values2.put(QuestionContract.Column.ID, "2"); //Se pasan pares nombre-valor
+        values2.put(QuestionContract.Column.STATEMENT, "statement 2");
+        values2.put(QuestionContract.Column.QUESTION, "Razonamiento lógico");
+        values2.put(QuestionContract.Column.ANSWER1, "answer 1"); //Se pasan pares nombre-valor
+        values2.put(QuestionContract.Column.ANSWER2, "answer 2");
+        values2.put(QuestionContract.Column.ANSWER3, "answer 3");
+        values2.put(QuestionContract.Column.ANSWER4, "answer 4");
+        values2.put(QuestionContract.Column.CORRECTANSWER, "answer 1");
+        db.insertWithOnConflict(QuestionContract.TABLE, null, values2, SQLiteDatabase.CONFLICT_IGNORE); //Se guarda la fila en la base de datos
+
     }
 }
